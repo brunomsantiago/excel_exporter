@@ -1,5 +1,5 @@
-from cell_format import CellFormat
-from group import Group
+from format.cell_format import CellFormat
+from format.group import Group
 
 
 class Column:

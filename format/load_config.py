@@ -1,10 +1,10 @@
 import yaml
 
-from cell_format import CellFormat
-from column import Column
-from excel_configuration import ExcelConfiguration
-from group import Group
-from sheet import Sheet
+from format.cell_format import CellFormat
+from format.column import Column
+from format.excel_configuration import ExcelConfiguration
+from format.group import Group
+from format.sheet import Sheet
 
 
 def parse_yaml(yaml_data) -> ExcelConfiguration:
