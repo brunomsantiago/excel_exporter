@@ -1,0 +1,62 @@
+file_name: advanced_excel_file.xlsx
+cell_formats:
+  - format_name: format1
+    font_size: 12
+    horizontal_alignment: center
+    vertical_alignment: middle
+    line_break: false
+  - format_name: format2
+    font_size: 14
+    horizontal_alignment: right
+    vertical_alignment: top
+    line_break: false
+  - format_name: format3
+    font_size: 16
+    horizontal_alignment: left
+    vertical_alignment: bottom
+    line_break: true
+sheets:
+  - sheet_name: Sheet1
+    groups:
+      - group_name: Group1
+        background_color: "#FFFF00"
+      - group_name: Group2
+        background_color: "#00FF00"
+    columns:
+      - column_name: Column1
+        variable_name: col1
+        cell_format: format1
+        group: Group1
+        column_width: 10
+      - column_name: Column2
+        variable_name: col2
+        cell_format: format1
+        group: Group2
+        column_width: 20
+      - column_name: Column3
+        variable_name: col3
+        cell_format: format2
+        group: Group1
+        column_width: 15
+  - sheet_name: Sheet2
+    groups:
+      - group_name: Group3
+        background_color: "#FF00FF"
+      - group_name: Group4
+        background_color: "#00FFFF"
+    columns:
+      - column_name: Column4
+        variable_name: col4
+        cell_format: format2
+        group: Group3
+        column_width: 30
+      - column_name: Column5
+        variable_name: col5
+        cell_format: format3
+        group: Group4
+        column_width: 25
+      - column_name: Column6
+        variable_name: col6
+        cell_format: format1
+        group: Group3
+        column_width: 35
