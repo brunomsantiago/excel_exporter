@@ -1,4 +1,4 @@
-from typing import Dict
+from typing import Dict, List
 
 from openpyxl.worksheet.worksheet import Worksheet
 
@@ -11,7 +11,7 @@ from exporter.write_columns_header import write_columns_header
 
 
 def write_sheet(ws: Worksheet,
-                ws_data: Dict,
+                ws_data: Dict[str, List],
                 ws_config: SheetConfiguration,
                 update_time,
                 ):
