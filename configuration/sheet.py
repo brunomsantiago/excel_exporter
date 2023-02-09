@@ -1,4 +1,4 @@
-from typing import Dict
+from typing import Dict, Tuple
 
 from configuration.group import Group
 from configuration.column import Column
@@ -22,7 +22,7 @@ class Sheet:
         self.groups = groups
         self.columns = columns
 
-    def groups_limits(self):
+    def groups_limits(self) -> Dict[str, Tuple]:
         cols_groups = [col.group.group_name for col in self.columns.values()]
         groups_names = list(dict.fromkeys(cols_groups))
         return {
