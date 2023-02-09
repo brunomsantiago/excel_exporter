@@ -32,12 +32,12 @@ sheets:
         background_color: "#9BBB59"
     columns:
       - column_name: id
-        variable_name: employeee_id
+        variable_name: employee_id
         cell_format: normal_fmt
         group: General Info
         column_width: 6
       - column_name: Name
-        variable_name: name
+        variable_name: employee_name
         cell_format: normal_fmt
         group: General Info
         column_width: 10
@@ -52,7 +52,7 @@ sheets:
         group: Work Info
         column_width: 10
       - column_name: Date of Birth
-        variable_name: data_of_birth
+        variable_name: date_of_birth
         cell_format: normal_fmt
         group: Personal Info
         column_width: 10
@@ -61,8 +61,8 @@ sheets:
         cell_format: normal_fmt
         group: Personal Info
         column_width: 10
-      - column_name: Adress
-        variable_name: adress
+      - column_name: Address
+        variable_name: address
         cell_format: small_break_fmt
         group: Personal Info
         column_width: 10
@@ -77,12 +77,12 @@ sheets:
         background_color: "#00FFFF"
     columns:
       - column_name: id
-        variable_name: employeee_id
+        variable_name: employee_id
         cell_format: normal_fmt
         group: Employee
         column_width: 6
       - column_name: Name
-        variable_name: employeee_name
+        variable_name: employee_name
         cell_format: normal_fmt
         group: Employee
         column_width: 10
