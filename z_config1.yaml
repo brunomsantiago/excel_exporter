@@ -82,7 +82,7 @@ sheets:
         group: Employee
         column_width: 6
       - column_name: Name
-        variable_name: name
+        variable_name: employeee_name
         cell_format: normal_fmt
         group: Employee
         column_width: 10

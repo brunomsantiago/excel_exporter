@@ -2,12 +2,12 @@ from typing import Dict
 import yaml
 
 
-from format.are_strings_grouped import are_strings_grouped
-from format.cell_format import CellFormat
-from format.column import Column
-from format.excel_configuration import ExcelConfiguration
-from format.group import Group
-from format.sheet import Sheet
+from configuration.are_strings_grouped import are_strings_grouped
+from configuration.cell_format import CellFormat
+from configuration.column import Column
+from configuration.excel_configuration import ExcelConfiguration
+from configuration.group import Group
+from configuration.sheet import Sheet
 
 
 def parse_yaml(yaml_data: Dict) -> ExcelConfiguration:

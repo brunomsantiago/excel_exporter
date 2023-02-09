@@ -1,8 +1,8 @@
 from typing import Dict
 
-from format.group import Group
-from format.column import Column
-from format.cell_format import CellFormat
+from configuration.group import Group
+from configuration.column import Column
+from configuration.cell_format import CellFormat
 
 
 def indexes(element, my_list):
