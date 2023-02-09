@@ -25,11 +25,11 @@ sheets:
     update_date_format: small_fmt
     groups:
       - group_name: General Info
-        background_color: "#4F81BD"
+        background_color: 4F81BD
       - group_name: Work Info
-        background_color: "#C0504D"
+        background_color: C0504D
       - group_name: Personal Info
-        background_color: "#9BBB59"
+        background_color: 9BBB59
     columns:
       - column_name: id
         variable_name: employee_id
@@ -70,11 +70,11 @@ sheets:
     update_date_format: small_fmt
     groups:
       - group_name: Employee
-        background_color: "#FF00FF"
+        background_color: 8064A2
       - group_name: Current Year
-        background_color: "#00FFFF"
+        background_color: 4F81BD
       - group_name: Last Year
-        background_color: "#00FFFF"
+        background_color: C0504D
     columns:
       - column_name: id
         variable_name: employee_id
