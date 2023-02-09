@@ -1,62 +1,106 @@
 file_name: advanced_excel_file.xlsx
 cell_formats:
-  - format_name: format1
-    font_size: 12
+  - format_name: normal_fmt
+    font_size: 11
     horizontal_alignment: center
-    vertical_alignment: middle
+    vertical_alignment: center
     line_break: false
-  - format_name: format2
-    font_size: 14
-    horizontal_alignment: right
-    vertical_alignment: top
-    line_break: false
-  - format_name: format3
-    font_size: 16
+  - format_name: left_fmt
+    font_size: 11
     horizontal_alignment: left
-    vertical_alignment: bottom
+    vertical_alignment: center
+    line_break: false
+  - format_name: small_fmt
+    font_size: 8
+    horizontal_alignment: left
+    vertical_alignment: center
+    line_break: false
+  - format_name: small_break_fmt
+    font_size: 8
+    horizontal_alignment: left
+    vertical_alignment: center
     line_break: true
 sheets:
-  - sheet_name: Sheet1
+  - sheet_name: Employees (Full)
     groups:
-      - group_name: Group1
-        background_color: "#FFFF00"
-      - group_name: Group2
-        background_color: "#00FF00"
+      - group_name: General Info
+        background_color: "#4F81BD"
+      - group_name: Work Info
+        background_color: "#C0504D"
+      - group_name: Personal Info
+        background_color: "#9BBB59"
     columns:
-      - column_name: Column1
-        variable_name: col1
-        cell_format: format1
-        group: Group1
+      - column_name: id
+        variable_name: employeee_id
+        cell_format: normal_fmt
+        group: General Info
+        column_width: 6
+      - column_name: Name
+        variable_name: name
+        cell_format: normal_fmt
+        group: General Info
         column_width: 10
-      - column_name: Column2
-        variable_name: col2
-        cell_format: format1
-        group: Group2
-        column_width: 20
-      - column_name: Column3
-        variable_name: col3
-        cell_format: format2
-        group: Group2
-        column_width: 15
-  - sheet_name: Sheet2
+      - column_name: Department
+        variable_name: department
+        cell_format: small_fmt
+        group: Work Info
+        column_width: 10
+      - column_name: Job Title
+        variable_name: job_title
+        cell_format: small_fmt
+        group: Work Info
+        column_width: 10
+      - column_name: Date of Birth
+        variable_name: data_of_birth
+        cell_format: normal_fmt
+        group: Personal Info
+        column_width: 10
+      - column_name: Phone
+        variable_name: phone_number
+        cell_format: normal_fmt
+        group: Personal Info
+        column_width: 10
+      - column_name: Adress
+        variable_name: adress
+        cell_format: small_break_fmt
+        group: Personal Info
+        column_width: 10
+  - sheet_name: Performance
     groups:
-      - group_name: Group3
+      - group_name: Employee
         background_color: "#FF00FF"
-      - group_name: Group4
+      - group_name: Current Year
+        background_color: "#00FFFF"
+      - group_name: Last Year
         background_color: "#00FFFF"
     columns:
-      - column_name: Column4
-        variable_name: col4
-        cell_format: format2
-        group: Group3
-        column_width: 30
-      - column_name: Column5
-        variable_name: col5
-        cell_format: format3
-        group: Group3
-        column_width: 25
-      - column_name: Column6
-        variable_name: col6
-        cell_format: format1
-        group: Group4
-        column_width: 35
+      - column_name: id
+        variable_name: employeee_id
+        cell_format: normal_fmt
+        group: Employee
+        column_width: 6
+      - column_name: Name
+        variable_name: name
+        cell_format: normal_fmt
+        group: Employee
+        column_width: 10
+      - column_name: Sales (kUSD)
+        variable_name: sales_current_year
+        cell_format: normal_fmt
+        group: Current Year
+        column_width: 10
+      - column_name: Score Card
+        variable_name: scorecard_current_year
+        cell_format: normal_fmt
+        group: Current Year
+        column_width: 10
+      - column_name: Sales (kUSD).
+        variable_name: sales_last_year
+        cell_format: normal_fmt
+        group: Last Year
+        column_width: 10
+      - column_name: Score Card.
+        variable_name: scorecard_last_year
+        cell_format: normal_fmt
+        group: Last Year
+        column_width: 10
