@@ -2,6 +2,7 @@ from typing import Dict
 
 from format.group import Group
 from format.column import Column
+from format.cell_format import CellFormat
 
 
 def indexes(element, my_list):
@@ -13,9 +14,11 @@ def indexes(element, my_list):
 class Sheet:
     def __init__(self,
                  sheet_name: str,
+                 update_date_format: CellFormat,
                  groups: Dict[str, Group],
                  columns: Dict[str, Column]):
         self.sheet_name = sheet_name
+        self.update_date_format = update_date_format
         self.groups = groups
         self.columns = columns
 

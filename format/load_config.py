@@ -54,8 +54,15 @@ def parse_yaml(yaml_data: Dict) -> ExcelConfiguration:
         cols_groups = [col.group.group_name for col in columns.values()]
         if not are_strings_grouped(cols_groups):
             raise ValueError(f"Columns are not grouped: \n{cols_groups}")
+        # Update date reference to a previously load cell format
+        update_date_format = cell_formats.get(
+            sheet_data["update_date_format"], None)
+        if not update_date_format:
+            raise ValueError(
+                f"Cell format {sheet_data['update_date_format']} not found")
         # Finish creating the sheet
-        sheet = Sheet(sheet_data["sheet_name"], groups, columns)
+        sheet = Sheet(sheet_data["sheet_name"],
+                      update_date_format, groups, columns)
         sheets[sheet_data["sheet_name"]] = sheet
     # Finish creating the configuration
     return ExcelConfiguration(file_name, cell_formats, sheets)

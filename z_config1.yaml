@@ -22,6 +22,7 @@ cell_formats:
     line_break: true
 sheets:
   - sheet_name: Employees (Full)
+    update_date_format: small_fmt
     groups:
       - group_name: General Info
         background_color: "#4F81BD"
@@ -66,6 +67,7 @@ sheets:
         group: Personal Info
         column_width: 10
   - sheet_name: Performance
+    update_date_format: small_fmt
     groups:
       - group_name: Employee
         background_color: "#FF00FF"
