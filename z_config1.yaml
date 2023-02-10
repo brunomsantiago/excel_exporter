@@ -40,32 +40,32 @@ sheets:
         variable_name: employee_name
         cell_format: normal_fmt
         group: General Info
-        column_width: 10
+        column_width: 14
       - column_name: Department
         variable_name: department
         cell_format: small_fmt
         group: Work Info
-        column_width: 10
+        column_width: 14
       - column_name: Job Title
         variable_name: job_title
         cell_format: small_fmt
         group: Work Info
-        column_width: 10
+        column_width: 12
       - column_name: Date of Birth
         variable_name: date_of_birth
         cell_format: normal_fmt
         group: Personal Info
-        column_width: 10
+        column_width: 15
       - column_name: Phone
         variable_name: phone_number
         cell_format: normal_fmt
         group: Personal Info
-        column_width: 10
+        column_width: 15
       - column_name: Address
         variable_name: address
         cell_format: small_break_fmt
         group: Personal Info
-        column_width: 10
+        column_width: 11
   - sheet_name: Performance
     update_date_format: small_fmt
     groups:
@@ -85,24 +85,24 @@ sheets:
         variable_name: employee_name
         cell_format: normal_fmt
         group: Employee
-        column_width: 10
+        column_width: 14
       - column_name: Sales (kUSD)
         variable_name: sales_current_year
         cell_format: normal_fmt
         group: Current Year
-        column_width: 10
+        column_width: 15
       - column_name: Score Card
         variable_name: scorecard_current_year
         cell_format: normal_fmt
         group: Current Year
-        column_width: 10
+        column_width: 14
       - column_name: Sales (kUSD).
         variable_name: sales_last_year
         cell_format: normal_fmt
         group: Last Year
-        column_width: 10
+        column_width: 15
       - column_name: Score Card.
         variable_name: scorecard_last_year
         cell_format: normal_fmt
         group: Last Year
-        column_width: 10
+        column_width: 14
