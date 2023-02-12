@@ -1,0 +1,9 @@
+## Motivation
+
+For many years, I have been creating excel spreadsheets with a similar look and feel. My template consists of data organized into tables with similar categories having the same background colors and a merged cell with a category title above them. The background colors are dark with a bold white font to provide contrast and the grid lines are hidden. I use blank columns before and after the table as borders and hide unused columns.
+
+Initially, I would manually create these spreadsheets in Excel, but when I needed to update one of them every week, I decided to create a python script to automate the process. The script I created worked well, but it was very hard to maintain. If I needed to add or remove a column, I would have to make a lot of changes, and if I needed to adapt the script to another dataset, I would have to start from scratch.
+
+I promised myself that I would make a cleaner version of the excel exporter as soon as I had time. The original script was written using the pandas and xlswriter libraries, where I put the data on the sheet using pandas and formatted everything I needed using xlswriter. However, recently I needed to add hyperlinks to some cells in a particular column, and I was unable to do so with my current approach. So, I decided to completely rewrite my script to make it easier to adapt to new uses and allow for the possibility of adding hyperlinks to cells.
+
+I don't intend to maintain this repository, nor turn it into a library. However, I believe that the new version makes it very easy to create spreadsheets with my template and may be useful to others. Additionally, I think that the code is organized well enough to be adapted to other templates or used as a reference on how to organize a script to generate excel spreadsheets with complex formatting.
