@@ -28,7 +28,7 @@ data = [
 
 
 update_time = datetime.utcnow()
-config = load_config('z_config1.yaml')
+config = load_config('example_config.yaml')
 virtual_file = export_excel(data, config, update_time)
-with open('former_virtual_file.xlsx', 'wb') as f:
+with open('example_output.xlsx', 'wb') as f:
     f.write(virtual_file.getbuffer())
