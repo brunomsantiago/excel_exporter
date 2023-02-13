@@ -39,7 +39,7 @@ data = [
         "employee_id": [(1001, 'https://employee.my_company.com/id/1001'),
                         (1002, 'https://employee.my_company.com/id/1002')],
         "employee_name": ["John Doe", "Jane Doe"],
-        "department": ["Marketing", "Sales"],
+        "department": ["Sales South Area", "Sales West Area"],
         "job_title": ["Manager", "Associate"]
     },
     {
@@ -75,8 +75,8 @@ from datetime import datetime
 update_time = datetime.now()
 ```
 
-### 3. Call the Exporter
-Once your data is prepared and the YAML is loaded, you're ready to call the exporter. Simply pass your data and configuration as arguments to the exporter, and the export process will begin. It will return a virtual file (BytesIO)
+### 3. Run the Exporter
+Once your data is prepared and the YAML is loaded, you're ready to run the exporter. Simply pass your data, configuration and update time as arguments to the exporter, and the export process will begin. It will return a virtual file (BytesIO)
 ```python
 from exporter.create_excel import export_excel
 
@@ -85,6 +85,6 @@ virtual_file = export_excel(data, config, update_time)
 ### 4. Save or upload the file
 Once the export process is complete, you can choose to either save the virtual file as a real file on your local machine, or upload it to a remote server using an API. Here is an example of how to save the file locally:
 ```python
-with open('my_excel_file.xlsx', 'wb') as file:
+with open('example_output.xlsx', 'wb') as file:
     file.write(virtual_file.getbuffer())
 ```
