@@ -5,75 +5,18 @@ cell_formats:
     horizontal_alignment: center
     vertical_alignment: center
     line_break: false
-  - format_name: left_fmt
-    font_size: 11
-    horizontal_alignment: left
-    vertical_alignment: center
-    line_break: false
   - format_name: small_fmt
     font_size: 8
     horizontal_alignment: left
     vertical_alignment: center
     line_break: false
-  - format_name: small_break_fmt
-    font_size: 8
-    horizontal_alignment: left
-    vertical_alignment: center
-    line_break: true
 sheets:
-  - sheet_name: Employees (Full)
-    update_date_format: small_fmt
-    groups:
-      - group_name: General Info
-        background_color: 4F81BD
-      - group_name: Work Info
-        background_color: C0504D
-      - group_name: Personal Info
-        background_color: 9BBB59
-    columns:
-      - column_name: id
-        variable_name: employee_id
-        cell_format: normal_fmt
-        group: General Info
-        column_width: 6
-      - column_name: Name
-        variable_name: employee_name
-        cell_format: normal_fmt
-        group: General Info
-        column_width: 14
-      - column_name: Department
-        variable_name: department
-        cell_format: small_fmt
-        group: Work Info
-        column_width: 14
-      - column_name: Job Title
-        variable_name: job_title
-        cell_format: small_fmt
-        group: Work Info
-        column_width: 12
-      - column_name: Date of Birth
-        variable_name: date_of_birth
-        cell_format: normal_fmt
-        group: Personal Info
-        column_width: 15
-      - column_name: Phone
-        variable_name: phone_number
-        cell_format: normal_fmt
-        group: Personal Info
-        column_width: 15
-      - column_name: Address
-        variable_name: address
-        cell_format: small_break_fmt
-        group: Personal Info
-        column_width: 11
-  - sheet_name: Performance
+  - sheet_name: Employees
     update_date_format: small_fmt
     groups:
       - group_name: Employee
-        background_color: 8064A2
-      - group_name: Current Year
         background_color: 4F81BD
-      - group_name: Last Year
+      - group_name: Employment Details
         background_color: C0504D
     columns:
       - column_name: id
@@ -86,23 +29,36 @@ sheets:
         cell_format: normal_fmt
         group: Employee
         column_width: 14
-      - column_name: Sales (kUSD)
+      - column_name: Department
+        variable_name: department
+        cell_format: normal_fmt
+        group: Employment Details
+        column_width: 14
+      - column_name: Job Title
+        variable_name: job_title
+        cell_format: normal_fmt
+        group: Employment Details
+        column_width: 12
+  - sheet_name: Employees Performance
+    update_date_format: small_fmt
+    groups:
+      - group_name: Employee
+        background_color: 4F81BD
+      - group_name: Sales (kUSD)
+        background_color: 8064A2
+    columns:
+      - column_name: id
+        variable_name: employee_id
+        cell_format: normal_fmt
+        group: Employee
+        column_width: 6
+      - column_name: Current Year
         variable_name: sales_current_year
         cell_format: normal_fmt
-        group: Current Year
+        group: Sales (kUSD)
         column_width: 15
-      - column_name: Score Card
-        variable_name: scorecard_current_year
-        cell_format: normal_fmt
-        group: Current Year
-        column_width: 14
-      - column_name: Sales (kUSD).
+      - column_name: Last Year
         variable_name: sales_last_year
         cell_format: normal_fmt
-        group: Last Year
+        group: Sales (kUSD)
         column_width: 15
-      - column_name: Score Card.
-        variable_name: scorecard_last_year
-        cell_format: normal_fmt
-        group: Last Year
-        column_width: 14
