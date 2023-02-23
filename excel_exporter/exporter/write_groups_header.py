@@ -3,7 +3,7 @@ from typing import Dict, Tuple
 from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.worksheet.worksheet import Worksheet
 
-from configuration.group import Group as GroupConfiguration
+from excel_exporter.configuration.group import Group as GroupConfiguration
 
 
 def write_groups_header(

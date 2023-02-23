@@ -3,7 +3,7 @@ from datetime import datetime
 from openpyxl.styles import Alignment, Font
 from openpyxl.worksheet.worksheet import Worksheet
 
-from configuration.cell_format import CellFormat
+from excel_exporter.configuration.cell_format import CellFormat
 
 
 def write_update_time(

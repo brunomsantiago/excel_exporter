@@ -1,8 +1,8 @@
 from typing import Dict, Tuple
 
-from configuration.group import Group
-from configuration.column import Column
-from configuration.cell_format import CellFormat
+from excel_exporter.configuration.group import Group
+from excel_exporter.configuration.column import Column
+from excel_exporter.configuration.cell_format import CellFormat
 
 
 def indexes(element, my_list):

@@ -3,8 +3,8 @@ from typing import Dict, List
 from openpyxl.styles import Alignment, Font
 from openpyxl.worksheet.worksheet import Worksheet
 
-from configuration.column import Column as ColumnConfiguration
-from configuration.cell_format import CellFormat
+from excel_exporter.configuration.column import Column as ColumnConfiguration
+from excel_exporter.configuration.cell_format import CellFormat
 
 
 def write_columns_data(

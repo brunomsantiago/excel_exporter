@@ -1,7 +1,7 @@
 from typing import Dict
 
-from configuration.cell_format import CellFormat
-from configuration.sheet import Sheet
+from excel_exporter.configuration.cell_format import CellFormat
+from excel_exporter.configuration.sheet import Sheet
 
 
 class ExcelConfiguration:

@@ -4,7 +4,7 @@ from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.worksheet import Worksheet
 
-from configuration.column import Column as ColumnConfiguration
+from excel_exporter.configuration.column import Column as ColumnConfiguration
 
 
 def write_columns_header(

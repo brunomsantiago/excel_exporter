@@ -4,7 +4,7 @@ from openpyxl.utils import get_column_letter, column_index_from_string
 from openpyxl.worksheet.table import Table, TableStyleInfo
 from openpyxl.worksheet.worksheet import Worksheet
 
-from configuration.sheet import Sheet as SheetConfiguration
+from excel_exporter.configuration.sheet import Sheet as SheetConfiguration
 
 
 def make_table_name(sheet_name: str) -> str:

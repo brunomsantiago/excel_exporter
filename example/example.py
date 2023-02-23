@@ -1,6 +1,6 @@
 from datetime import datetime
-from configuration.load_config import load_config
-from exporter.create_excel import export_excel
+from excel_exporter.configuration.load_config import load_config
+from excel_exporter.exporter.create_excel import export_excel
 
 # Prepare the Data
 data = [

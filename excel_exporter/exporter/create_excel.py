@@ -2,8 +2,8 @@ from io import BytesIO
 from openpyxl import Workbook
 from typing import Dict, List
 
-from configuration.excel_configuration import ExcelConfiguration
-from exporter.write_sheet import write_sheet
+from excel_exporter.configuration.excel_configuration import ExcelConfiguration
+from excel_exporter.exporter.write_sheet import write_sheet
 
 
 def export_excel(data: List[Dict], config: ExcelConfiguration, update_time):

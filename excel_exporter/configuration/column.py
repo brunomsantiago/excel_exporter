@@ -1,5 +1,5 @@
-from configuration.cell_format import CellFormat
-from configuration.group import Group
+from excel_exporter.configuration.cell_format import CellFormat
+from excel_exporter.configuration.group import Group
 
 
 class Column:
