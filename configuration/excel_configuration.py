@@ -5,10 +5,12 @@ from configuration.sheet import Sheet
 
 
 class ExcelConfiguration:
-    def __init__(self,
-                 file_name: str,
-                 cell_formats: Dict[str, CellFormat],
-                 sheets: Dict[str, Sheet]):
+    def __init__(
+        self,
+        file_name: str,
+        cell_formats: Dict[str, CellFormat],
+        sheets: Dict[str, Sheet],
+    ):
         self.file_name = file_name
         self.cell_formats = cell_formats
         self.sheets = sheets

@@ -3,12 +3,14 @@ from configuration.group import Group
 
 
 class Column:
-    def __init__(self,
-                 column_name: str,
-                 variable_name: str,
-                 cell_format: CellFormat,
-                 group: Group,
-                 column_width: int):
+    def __init__(
+        self,
+        column_name: str,
+        variable_name: str,
+        cell_format: CellFormat,
+        group: Group,
+        column_width: int,
+    ):
         self.column_name = column_name
         self.variable_name = variable_name
         self.cell_format = cell_format

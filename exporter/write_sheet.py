@@ -10,11 +10,12 @@ from exporter.write_columns_data import write_columns_data
 from exporter.write_columns_header import write_columns_header
 
 
-def write_sheet(ws: Worksheet,
-                ws_data: Dict[str, List],
-                ws_config: SheetConfiguration,
-                update_time,
-                ):
+def write_sheet(
+    ws: Worksheet,
+    ws_data: Dict[str, List],
+    ws_config: SheetConfiguration,
+    update_time,
+):
     write_update_time(ws, update_time, ws_config.update_date_format)
     write_groups_header(ws, ws_config.groups, ws_config.groups_limits())
     write_columns_header(ws, ws_config.columns)

@@ -12,11 +12,13 @@ def indexes(element, my_list):
 
 
 class Sheet:
-    def __init__(self,
-                 sheet_name: str,
-                 update_date_format: CellFormat,
-                 groups: Dict[str, Group],
-                 columns: Dict[str, Column]):
+    def __init__(
+        self,
+        sheet_name: str,
+        update_date_format: CellFormat,
+        groups: Dict[str, Group],
+        columns: Dict[str, Column],
+    ):
         self.sheet_name = sheet_name
         self.update_date_format = update_date_format
         self.groups = groups
@@ -27,8 +29,8 @@ class Sheet:
         groups_names = list(dict.fromkeys(cols_groups))
         return {
             group_name: indexes(group_name, cols_groups)
-            for group_name
-            in groups_names}
+            for group_name in groups_names
+        }
 
     def __repr__(self):
         s = []

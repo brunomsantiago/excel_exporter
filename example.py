@@ -5,17 +5,19 @@ from exporter.create_excel import export_excel
 # Prepare the Data
 data = [
     {
-        "employee_id": [(1001, 'https://employee.my_company.com/id/1001'),
-                        (1002, 'https://employee.my_company.com/id/1002')],
-        "employee_name": ["John Doe", "Jane Doe"],
-        "department": ["Sales South Area", "Sales West Area"],
-        "job_title": ["Manager", "Associate"]
+        'employee_id': [
+            (1001, 'https://employee.my_company.com/id/1001'),
+            (1002, 'https://employee.my_company.com/id/1002'),
+        ],
+        'employee_name': ['John Doe', 'Jane Doe'],
+        'department': ['Sales South Area', 'Sales West Area'],
+        'job_title': ['Manager', 'Associate'],
     },
     {
-        "employee_id": [1001, 1002],
-        "sales_current_year": [100000, 120000],
-        "sales_last_year": [90000, 110000]
-    }
+        'employee_id': [1001, 1002],
+        'sales_current_year': [100000, 120000],
+        'sales_last_year': [90000, 110000],
+    },
 ]
 # Load the YAML
 config = load_config('example_config.yaml')

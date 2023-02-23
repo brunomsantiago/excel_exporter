@@ -1,7 +1,5 @@
 class Group:
-    def __init__(self,
-                 group_name: str,
-                 background_color: str):
+    def __init__(self, group_name: str, background_color: str):
         self.group_name = group_name
         self.background_color = background_color
 
