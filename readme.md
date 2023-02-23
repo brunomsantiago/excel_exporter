@@ -58,11 +58,15 @@ data = [
 
 - If your data originally comes from a list of dictionaries, you can use the `utils` module to convert it.
 ```python
-# to fiil later: data conversion block of code
+from utils.data_conversion import from_list_of_dicts
+sheet1_data = from_list_of_dicts(sheet1_list_of_dicts)
+data = [sheet1_data]
 ```
 - If your data is in a pandas dataframe, a similar conversion process applies.
 ```python
-# to fiil later: data conversion block of code
+from utils.data_conversion import from_pandas_dataframe
+sheet1_data = from_pandas_dataframe(sheet1_df)
+data = [sheet1_data]
 ```
 ### 2. Prepare the YAML
 Configure the YAML based on the example previously described on the previous section
