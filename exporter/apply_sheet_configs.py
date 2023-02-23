@@ -35,7 +35,7 @@ def apply_sheet_configs(ws: Worksheet,
     ws.column_dimensions[right_border_col].width = 2
     # Hide gridlines
     ws.sheet_view.showGridLines = False
-    # Hide unused coluns:
+    # Hide unused columns:
     hidden_begin = ws.max_column + 2
     hidden_end = column_index_from_string('XFD') + 1
     for col_number in range(hidden_begin, hidden_end):

@@ -6,10 +6,10 @@ def are_strings_grouped(list_of_strings: List[str]) -> bool:
     n_unique_strings = len(set(list_of_strings))
     n_expected_changes = n_unique_strings - 1
     # Then find the real number of changes
-    groups_channges = [1 for former, latter
-                       in zip(list_of_strings[:-1], list_of_strings[1:])
-                       if former != latter]
-    n_real_changes = sum(groups_channges)
+    groups_changes = [1 for former, latter
+                      in zip(list_of_strings[:-1], list_of_strings[1:])
+                      if former != latter]
+    n_real_changes = sum(groups_changes)
     # Finally compare them
     return n_real_changes == n_expected_changes
 

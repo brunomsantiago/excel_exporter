@@ -26,7 +26,7 @@ The following animation shows how the data is organized:
  - Cell Formats: Font size, Horizontal alignment, Vertical alignment and Line break
  - Sheets: Sheet Name, Group(s), and Column(s)
  - Groups: Name and Background Color
- - Columns: Order, Title (to be display in Excel), Variable Name (in the python dictionary), Cell format (previouly defined), Group it belongs to (previouly defined) and  Column Width
+ - Columns: Order, Title (to be display in Excel), Variable Name (in the python dictionary), Cell format (previouly defined), Group it belongs to (previously defined) and  Column Width
  
  The following animation shows how the YAML file is organized:
 
@@ -81,7 +81,7 @@ config = load_config('example_config.yaml')
 ```
 
 ### 4. Retrieve the Current Date and Time
-This exporter was created for periodically updated spreadsheets. So it also important to include the time and date of the dataset. These can be retrieved usion datetime module.
+This exporter was created for periodically updated spreadsheets. So it also important to include the time and date of the dataset. These can be retrieved using datetime module.
 ```python
 from datetime import datetime
 
