@@ -24,5 +24,5 @@ update_time = datetime.now()
 # Run the Exporter
 virtual_file = export_excel(data, config, update_time)
 # Save the file
-with open('example_output.xlsx', 'wb') as file:
+with open(config.file_name, 'wb') as file:
     file.write(virtual_file.getbuffer())

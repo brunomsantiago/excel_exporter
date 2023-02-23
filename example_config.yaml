@@ -1,4 +1,4 @@
-file_name: advanced_excel_file.xlsx
+file_name: example_output.xlsx
 cell_formats:
   - format_name: normal_fmt
     font_size: 11
