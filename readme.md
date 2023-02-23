@@ -4,7 +4,7 @@
 
 For many years, I have been creating excel spreadsheets with a similar look and feel. My template consists of data organized into excel tables with similar categories having the same background colors and a merged cell with a category title above them (outside the table). The background colors are dark(ish) to provide contrast with a bold white font. I use blank columns before and after the table as borders and hide grid lines and unused columns.
 
-![example of a excel sheet with the described template](images/img01_spreadsheet.png)
+![Image showing an example excel sheet as described above (check homepage)](images/img01_spreadsheet.png)
 
 I have been manually creating these spreadsheets in Excel, but when I needed to update one of them every week, I decided to create a python script to automate the process. The script worked well, but it was very hard to maintain. If I needed to add or remove a column, I would have to make a lot of changes, and if I needed to adapt the script to another dataset, I would have to almost start from scratch.
 
@@ -21,7 +21,7 @@ The data being exported is sourced from dictionaries (one for each sheet). In ca
 
 The following animation shows how the data is organized:
    
-![gif animation showing the structure of data](images/img02_data.gif)
+![Gif animation showing the structure of data (check homepage)](images/img02_data.gif)
 
  Configurations for columns, groups, sheets, and the workbook as a whole are stored in a YAML file.
  - Workbook: File name, Cell formats and Sheets.
@@ -32,7 +32,7 @@ The following animation shows how the data is organized:
  
  The following animation shows how the YAML file is organized:
 
-![gif animation showing the structure of the YAML file](images/img03_yaml.gif)
+![Gif animation showing the structure of the YAML file (check homepage)](images/img03_yaml.gif)
 
 ## How to install
 
