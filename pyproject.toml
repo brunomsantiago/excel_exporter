@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "excel_exporter_bms"
-version = "0.1.2"
+version = "0.1.3"
 description = "An excel exporter based on YAML configuration files"
 authors = ["Bruno Santiago <brunomsantiago@gmail.com>"]
 license = "MIT"

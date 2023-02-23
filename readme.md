@@ -76,14 +76,14 @@ data = [
 
 - If your data originally comes from a list of dictionaries, you can use the `utils` module to convert it.
 ```python
-from utils.data_conversion import from_list_of_dicts
+from excel_exporter.utils.data_conversion import from_list_of_dicts
 
 sheet1_data = from_list_of_dicts(sheet1_list_of_dicts)
 data = [sheet1_data]
 ```
 - If your data is in a pandas dataframe, a similar conversion process applies.
 ```python
-from utils.data_conversion import from_pandas_dataframe
+from excel_exporter.utils.data_conversion import from_pandas_dataframe
 
 sheet1_data = from_pandas_dataframe(sheet1_df)
 data = [sheet1_data]
@@ -95,7 +95,7 @@ Configure the YAML based on the example described on the previous section
 ### 3. Load the YAML
 Before using the exporter, you'll need to load the YAML configuration file that you'll be using to export your data.
 ```python
-from configuration.load_config import load_config
+from excel_exporter.configuration.load_config import load_config
 
 config = load_config('example_config.yaml')
 ```
@@ -111,7 +111,7 @@ update_time = datetime.now()
 ### 5. Run the Exporter
 Once your data is prepared and the YAML is loaded, you're ready to run the exporter. Simply pass your data, configuration and update time as arguments to the exporter, and the export process will begin. It will return a virtual file (BytesIO)
 ```python
-from exporter.create_excel import export_excel
+from excel_exporter.exporter.create_excel import export_excel
 
 virtual_file = export_excel(data, config, update_time)
 ```
