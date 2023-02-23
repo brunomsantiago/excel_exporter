@@ -1,3 +1,5 @@
+# Excel Exporter
+
 ## Motivation
 
 For many years, I have been creating excel spreadsheets with a similar look and feel. My template consists of data organized into excel tables with similar categories having the same background colors and a merged cell with a category title above them (outside the table). The background colors are dark(ish) to provide contrast with a bold white font. I use blank columns before and after the table as borders and hide grid lines and unused columns.
@@ -34,6 +36,8 @@ The following animation shows how the data is organized:
 
 ## How to use
 
+You can check the full code for this tutorial in `example.py`
+
 ### 1. Prepare the Data
 It's necessary to properly prepare your data before using the exporter.
 The data must be a list of dictionary of lists, where each dictionary represents a sheet in the excel file.
@@ -59,17 +63,19 @@ data = [
 - If your data originally comes from a list of dictionaries, you can use the `utils` module to convert it.
 ```python
 from utils.data_conversion import from_list_of_dicts
+
 sheet1_data = from_list_of_dicts(sheet1_list_of_dicts)
 data = [sheet1_data]
 ```
 - If your data is in a pandas dataframe, a similar conversion process applies.
 ```python
 from utils.data_conversion import from_pandas_dataframe
+
 sheet1_data = from_pandas_dataframe(sheet1_df)
 data = [sheet1_data]
 ```
 ### 2. Prepare the YAML
-Configure the YAML based on the example previously described on the previous section
+Configure the YAML based on the example described on the previous section
 
 
 ### 3. Load the YAML
@@ -98,6 +104,6 @@ virtual_file = export_excel(data, config, update_time)
 ### 6. Save or upload the file
 Once the export process is complete, you can choose to either save the virtual file as a real file on your local machine, or upload it to a remote server using an API. Here is an example of how to save the file locally:
 ```python
-with open('example_output.xlsx', 'wb') as file:
+with open(config.file_name, 'wb') as file:
     file.write(virtual_file.getbuffer())
 ```
