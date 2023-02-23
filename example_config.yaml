@@ -33,7 +33,7 @@ sheets:
         variable_name: department
         cell_format: normal_fmt
         group: Employment Details
-        column_width: 14
+        column_width: 16
       - column_name: Job Title
         variable_name: job_title
         cell_format: normal_fmt
@@ -51,7 +51,7 @@ sheets:
         variable_name: employee_id
         cell_format: normal_fmt
         group: Employee
-        column_width: 6
+        column_width: 11
       - column_name: Current Year
         variable_name: sales_current_year
         cell_format: normal_fmt
