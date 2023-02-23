@@ -10,7 +10,7 @@ I have been manually creating these spreadsheets in Excel, but when I needed to 
 
 I promised myself that I would make a cleaner version of the excel exporter as soon as I had time. The original script was written using the pandas and xlswriter libraries, where I put the data on the sheet using pandas and formatted everything I needed using xlswriter. However, recently I needed to add hyperlinks to some cells in a particular column, and I was unable to do so with my current approach. So, I decided to completely rewrite my script to make it easier to adapt to new uses and allow for the possibility of adding hyperlinks to cells.
 
-I don't intend to maintain this repository, nor turn it into a library. However, I believe that the new version makes it very easy to create spreadsheets with my template and may be useful to others. Additionally, I think that the code is organized well enough to be adapted to other templates or used as a reference on how to organize a script to generate excel spreadsheets with complex formatting.
+I don't intend to maintain this repository. However, I believe that the new version makes it very easy to create spreadsheets with my template and may be useful to others. Additionally, I think that the code is organized well enough to be adapted to other templates or used as a reference on how to organize a script to generate excel spreadsheets with complex formatting.
 
 
 ## The new approach
@@ -34,9 +34,23 @@ The following animation shows how the data is organized:
 
 ![gif animation showing the structure of the YAML file](images/img03_yaml.gif)
 
+## How to install
+
+Just use pip
+
+```
+pip install excel-exporter-bms
+```
+
+or poetry
+
+```
+poestry add excel-exporter-bms
+```
+
 ## How to use
 
-You can check the full code for this tutorial in `example.py`
+To run this tutorial you should download [example.py](https://github.com/brunomsantiago/excel_exporter/blob/master/example.py) and [example_config](https://github.com/brunomsantiago/excel_exporter/blob/master/example_config.yaml). It is expected to generate a file like [example_output.xlsx](https://github.com/brunomsantiago/excel_exporter/raw/master/example_output.xlsx)
 
 ### 1. Prepare the Data
 It's necessary to properly prepare your data before using the exporter.
