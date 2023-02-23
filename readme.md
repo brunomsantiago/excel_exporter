@@ -2,7 +2,7 @@
 
 For many years, I have been creating excel spreadsheets with a similar look and feel. My template consists of data organized into excel tables with similar categories having the same background colors and a merged cell with a category title above them (outside the table). The background colors are dark(ish) to provide contrast with a bold white font. I use blank columns before and after the table as borders and hide grid lines and unused columns.
 
-![image info](images/img01_spreadsheet.png)
+![example of a excel sheet with the described template](images/img01_spreadsheet.png)
 
 I have been manually creating these spreadsheets in Excel, but when I needed to update one of them every week, I decided to create a python script to automate the process. The script worked well, but it was very hard to maintain. If I needed to add or remove a column, I would have to make a lot of changes, and if I needed to adapt the script to another dataset, I would have to almost start from scratch.
 
@@ -16,16 +16,21 @@ I don't intend to maintain this repository, nor turn it into a library. However,
 The Excel Exporter was created utilizing openpyxl and has the capability to export multiple sheets into a single Excel file.
 
 The data being exported is sourced from dictionaries (one for each sheet). In cases where the data contains associated URLs, the exporter will automatically convert them into hyperlinks within the Excel file.
+
+The following animation shows how the data is organized:
    
-![image info](images/img02_data.gif)
+![gif animation showing the structure of data](images/img02_data.gif)
 
- numnConfigurations for columns, groups, sheets, and the spreadsheet as a whole are stored in a YAML file.
-    - Columns: Order, Variable Name (in the python dictionary), Title, Font, Width, and Group/Category it belongs to.
-    - Groups: Name and Background Color
-    - Sheets: Name, Group(s), and Column(s)
-    - Spreadsheet: Cell formats and Sheets.
+ Configurations for columns, groups, sheets, and the workbook as a whole are stored in a YAML file.
+ - Workbook: File name, Cell formats and Sheets.
+ - Cell Formats: Font size, Horizontal alignment, Vertical alignment and Line break
+ - Sheets: Sheet Name, Group(s), and Column(s)
+ - Groups: Name and Background Color
+ - Columns: Order, Title (to be display in Excel), Variable Name (in the python dictionary), Cell format (previouly defined), Group it belongs to (previouly defined) and  Column Width
+ 
+ The following animation shows how the YAML file is organized:
 
-    (picture)
+![gif animation showing the structure of the YAML file](images/img03_yaml.gif)
 
 ## How to use
 
@@ -59,8 +64,11 @@ data = [
 ```python
 # to fiil later: data conversion block of code
 ```
+### 2. Prepare the YAML
+Configure the YAML based on the example previously described on the previous section
 
-### 2. Load the YAML
+
+### 3. Load the YAML
 Before using the exporter, you'll need to load the YAML configuration file that you'll be using to export your data.
 ```python
 from configuration.load_config import load_config
@@ -68,7 +76,7 @@ from configuration.load_config import load_config
 config = load_config('example_config.yaml')
 ```
 
-### 3. Retrieve the Current Date and Time
+### 4. Retrieve the Current Date and Time
 This exporter was created for periodically updated spreadsheets. So it also important to include the time and date of the dataset. These can be retrieved usion datetime module.
 ```python
 from datetime import datetime
@@ -76,14 +84,14 @@ from datetime import datetime
 update_time = datetime.now()
 ```
 
-### 3. Run the Exporter
+### 5. Run the Exporter
 Once your data is prepared and the YAML is loaded, you're ready to run the exporter. Simply pass your data, configuration and update time as arguments to the exporter, and the export process will begin. It will return a virtual file (BytesIO)
 ```python
 from exporter.create_excel import export_excel
 
 virtual_file = export_excel(data, config, update_time)
 ```
-### 4. Save or upload the file
+### 6. Save or upload the file
 Once the export process is complete, you can choose to either save the virtual file as a real file on your local machine, or upload it to a remote server using an API. Here is an example of how to save the file locally:
 ```python
 with open('example_output.xlsx', 'wb') as file:
