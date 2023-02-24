@@ -79,7 +79,7 @@ def parse_yaml(yaml_data: Dict) -> ExcelConfiguration:
     return ExcelConfiguration(file_name, cell_formats, sheets)
 
 
-def load_config(file_path: str) -> ExcelConfiguration:
-    with open(file_path, 'r') as file:
+def load_config(file_path: str, encoding: str = 'utf8') -> ExcelConfiguration:
+    with open(file_path, 'r', encoding=encoding) as file:
         yaml_data = yaml.safe_load(file)
     return parse_yaml(yaml_data)
