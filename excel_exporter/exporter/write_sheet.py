@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import Dict, List
 
 from openpyxl.worksheet.worksheet import Worksheet
@@ -14,9 +15,12 @@ def write_sheet(
     ws: Worksheet,
     ws_data: Dict[str, List],
     ws_config: SheetConfiguration,
-    update_time,
+    update_time: datetime,
+    update_message: str,
 ):
-    write_update_time(ws, update_time, ws_config.update_date_format)
+    write_update_time(
+        ws, update_time, ws_config.update_date_format, update_message
+    )
     write_groups_header(ws, ws_config.groups, ws_config.groups_limits())
     write_columns_header(ws, ws_config.columns)
     write_columns_data(ws, ws_data, ws_config.columns)
