@@ -34,6 +34,9 @@ The following animation shows how the data is organized:
 
 ![Gif animation showing the structure of the YAML file (check homepage)](images/img03_yaml.gif)
 
+**Note**
+The YAML animation doesn't include the workbook parameter `update_message`, which was included later. Check it in [example_config.yaml](https://github.com/brunomsantiago/excel_exporter/blob/master/example_config.yaml) line 2.
+
 ## How to install
 
 Just use pip
@@ -50,7 +53,7 @@ poestry add excel-exporter-bms
 
 ## How to use
 
-To run this tutorial you should download [example.py](https://github.com/brunomsantiago/excel_exporter/blob/master/example.py) and [example_config](https://github.com/brunomsantiago/excel_exporter/blob/master/example_config.yaml). It is expected to generate a file like [example_output.xlsx](https://github.com/brunomsantiago/excel_exporter/raw/master/example_output.xlsx)
+To run this tutorial you should download [example.py](https://github.com/brunomsantiago/excel_exporter/blob/master/example.py) and [example_config.yaml](https://github.com/brunomsantiago/excel_exporter/blob/master/example_config.yaml). It is expected to generate a file like [example_output.xlsx](https://github.com/brunomsantiago/excel_exporter/raw/master/example_output.xlsx)
 
 ### 1. Prepare the Data
 It's necessary to properly prepare your data before using the exporter.
