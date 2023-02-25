@@ -10,7 +10,7 @@ def write_update_time(
     ws: Worksheet,
     update_time: datetime,
     format: CellFormat,
-    message: str = 'Updated at',
+    message: str,
 ):
     cell = ws.cell(row=1, column=2)
     # Write update time

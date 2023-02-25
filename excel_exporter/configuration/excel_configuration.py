@@ -8,10 +8,12 @@ class ExcelConfiguration:
     def __init__(
         self,
         file_name: str,
+        update_message: str,
         cell_formats: Dict[str, CellFormat],
         sheets: Dict[str, Sheet],
     ):
         self.file_name = file_name
+        self.update_message = update_message
         self.cell_formats = cell_formats
         self.sheets = sheets
 
