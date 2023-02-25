@@ -15,6 +15,7 @@ from excel_exporter.configuration.sheet import Sheet
 def parse_yaml(yaml_data: Dict) -> ExcelConfiguration:
     # 1. File name
     file_name = yaml_data['file_name']
+    update_message = str(yaml_data['update_message']).strip()
     # 2. Cell Formats
     cell_formats = {}
     for cell_format_data in yaml_data['cell_formats']:
@@ -76,7 +77,7 @@ def parse_yaml(yaml_data: Dict) -> ExcelConfiguration:
         )
         sheets[sheet_data['sheet_name']] = sheet
     # Finish creating the configuration
-    return ExcelConfiguration(file_name, cell_formats, sheets)
+    return ExcelConfiguration(file_name, update_message, cell_formats, sheets)
 
 
 def load_config(file_path: str, encoding: str = 'utf8') -> ExcelConfiguration:
