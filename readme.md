@@ -34,7 +34,8 @@ The following animation shows how the data is organized:
 
 ![Gif animation showing the structure of the YAML file (check homepage)](images/img03_yaml.gif)
 
-**Note**
+**Note:**
+
 The YAML animation doesn't include the workbook parameter `update_message`, which was included later. Check it in [example_config.yaml](https://github.com/brunomsantiago/excel_exporter/blob/master/example_config.yaml) line 2.
 
 ## How to install
