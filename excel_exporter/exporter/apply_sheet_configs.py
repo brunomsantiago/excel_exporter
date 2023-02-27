@@ -14,8 +14,6 @@ def make_table_name(sheet_name: str) -> str:
 
 
 def apply_sheet_configs(ws: Worksheet, ws_config: SheetConfiguration):
-    # Sheet name
-    ws.title = ws_config.sheet_name
     # Format Table
     ref = f'B3:{get_column_letter(ws.max_column)}{str(ws.max_row)}'
     table_name = make_table_name(ws_config.sheet_name)

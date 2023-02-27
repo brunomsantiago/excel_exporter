@@ -18,6 +18,8 @@ def write_sheet(
     update_time: datetime,
     update_message: str,
 ):
+    # Sheet name
+    ws.title = ws_config.sheet_name
     write_update_time(
         ws, update_time, ws_config.update_date_format, update_message
     )
