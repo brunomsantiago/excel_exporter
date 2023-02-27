@@ -113,15 +113,14 @@ update_time = datetime.now()
 ```
 
 ### 5. Run the Exporter
-Once your data is prepared and the YAML is loaded, you're ready to run the exporter. Simply pass your data, configuration and update time as arguments to the exporter, and the export process will begin. It will return a virtual file (BytesIO)
+Once your data is prepared and the YAML is loaded, you're ready to run the exporter. Simply pass your data, configuration and update time as arguments to the exporter, and the export process will begin. It will return a openpyxl workbook.
 ```python
 from excel_exporter.exporter.create_excel import export_excel
 
-virtual_file = export_excel(data, config, update_time)
+workbook = export_excel(data, config, update_time)
 ```
 ### 6. Save or upload the file
-Once the export process is complete, you can choose to either save the virtual file as a real file on your local machine, or upload it to a remote server using an API. Here is an example of how to save the file locally:
+Once the export process is complete, you can choose to either save the workbook file as a real file on your local machine, or upload it to a remote server using an API. Here is an example of how to save the file locally:
 ```python
-with open(config.file_name, 'wb') as file:
-    file.write(virtual_file.getbuffer())
+workbook.save(config.file_name)
 ```

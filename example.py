@@ -24,7 +24,6 @@ config = load_config('example_config.yaml')
 # Retrieve the Current Date and Time
 update_time = datetime.now()
 # Run the Exporter
-virtual_file = export_excel(data, config, update_time)
+workbook = export_excel(data, config, update_time)
 # Save the file
-with open(config.file_name, 'wb') as file:
-    file.write(virtual_file.getbuffer())
+workbook.save(config.file_name)

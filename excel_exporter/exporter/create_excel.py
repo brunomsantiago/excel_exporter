@@ -1,4 +1,3 @@
-from io import BytesIO
 from openpyxl import Workbook
 from typing import Dict, List
 
@@ -13,7 +12,4 @@ def export_excel(data: List[Dict], config: ExcelConfiguration, update_time):
     ):
         ws = wb.active if n == 0 else wb.create_sheet()
         write_sheet(ws, ws_data, ws_config, update_time, config.update_message)
-    virtual_file = BytesIO()
-    wb.save(virtual_file)
-    virtual_file.seek(0)
-    return virtual_file
+    return wb
