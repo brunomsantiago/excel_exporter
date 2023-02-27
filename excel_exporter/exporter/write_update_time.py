@@ -4,6 +4,7 @@ from openpyxl.styles import Alignment, Font
 from openpyxl.worksheet.worksheet import Worksheet
 
 from excel_exporter.configuration.cell_format import CellFormat
+from excel_exporter.exporter.character_validation import robust_write_cell
 
 
 def write_update_time(
@@ -14,7 +15,8 @@ def write_update_time(
 ):
     cell = ws.cell(row=1, column=2)
     # Write update time
-    cell.value = f'{message} {update_time.strftime("%Y-%m-%d")}'
+    full_update_time_message = f'{message} {update_time.strftime("%Y-%m-%d")}'
+    robust_write_cell(cell, full_update_time_message)
     # Format update time cell
     alignment = Alignment(
         horizontal=format.horizontal_alignment,

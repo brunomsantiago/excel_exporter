@@ -4,6 +4,7 @@ from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.worksheet.worksheet import Worksheet
 
 from excel_exporter.configuration.group import Group as GroupConfiguration
+from excel_exporter.exporter.character_validation import robust_write_cell
 
 
 def write_groups_header(
@@ -30,7 +31,7 @@ def write_groups_header(
             end_column=group_end_col,
         )
         cell = ws.cell(row=row_number, column=group_start_col)
-        cell.value = group.group_name
+        robust_write_cell(cell, group.group_name)
         cell.fill = fill
         cell.alignment = alignment
         cell.font = font

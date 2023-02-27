@@ -5,6 +5,7 @@ from openpyxl.worksheet.worksheet import Worksheet
 
 from excel_exporter.configuration.column import Column as ColumnConfiguration
 from excel_exporter.configuration.cell_format import CellFormat
+from excel_exporter.exporter.character_validation import robust_write_cell
 
 
 def write_columns_data(
@@ -42,7 +43,7 @@ def write_column(
         else:
             url = None
         cell = ws.cell(row=row_number, column=col_number)
-        cell.value = value
+        robust_write_cell(cell, value)
         cell.alignment = alignment
         if not url:
             cell.font = font
