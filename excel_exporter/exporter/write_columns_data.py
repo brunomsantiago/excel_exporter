@@ -5,6 +5,10 @@ from openpyxl.worksheet.worksheet import Worksheet
 
 from excel_exporter.configuration.column import Column as ColumnConfiguration
 from excel_exporter.configuration.cell_format import CellFormat
+from excel_exporter.exporter.character_validation import (
+    clean_string,
+    robust_write_cell,
+)
 
 
 def write_columns_data(
@@ -38,11 +42,11 @@ def write_column(
     url_font = Font(size=format.font_size, underline='single', color='0563C1')
     for row_number, value in enumerate(col_data, start=start_row):
         if isinstance(value, list) or isinstance(value, tuple):
-            value, url = value[0], value[1]
+            value, url = value[0], clean_string(value[1])
         else:
             url = None
         cell = ws.cell(row=row_number, column=col_number)
-        cell.value = value
+        robust_write_cell(cell, value)
         cell.alignment = alignment
         if not url:
             cell.font = font

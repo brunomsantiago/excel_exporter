@@ -5,6 +5,7 @@ from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.worksheet import Worksheet
 
 from excel_exporter.configuration.column import Column as ColumnConfiguration
+from excel_exporter.exporter.character_validation import robust_write_cell
 
 
 def write_columns_header(
@@ -20,7 +21,7 @@ def write_columns_header(
     ):
         # Write column name
         cell = ws.cell(row=row_number, column=col_number)
-        cell.value = col_config.column_name
+        robust_write_cell(cell, col_config.column_name)
         # Format column background color in the header
         color = col_config.group.background_color.lstrip('#')
         fill = PatternFill(

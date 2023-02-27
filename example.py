@@ -6,10 +6,10 @@ from excel_exporter.exporter.create_excel import export_excel
 data = [
     {
         'employee_id': [
-            (1001, 'https://employee.my_company.com/id/1001'),
+            (1001, 'https://employee.my_company.com/id/1001' + chr(31)),
             (1002, 'https://employee.my_company.com/id/1002'),
         ],
-        'employee_name': ['John Doe', 'Jane Doe'],
+        'employee_name': ['John Doe', 'Jane Doe' + chr(31)],
         'department': ['Sales South Area', 'Sales West Area'],
         'job_title': ['Manager', 'Associate'],
     },
